@@ -1,0 +1,26 @@
+<%- include("includes/subHeader"); %>
+
+<main id="signform">
+  <div class="contents">
+    <h2 class="title">로그인</h2>
+    <form action="/signin" method="POST" class="signInForm">
+      <div class="inputBox">
+        <label>
+          <span class="label">ID</span>
+          <input type="text" name="userID" id="userID" placeholder="ID를 입력하세요." />
+        </label>
+        <label>
+          <span class="label">비밀번호</span>
+          <input type="password" name="userPassword" id="userPassword" placeholder="비밀번호를 입력하세요." />
+        </label>
+        <div class="btns">
+          <button type="submit" class="btn btnLogin">확인</button>
+          <button type="reset" class="btn btnCancel">취소</button>
+        </div>
+      </div>
+    </form>
+    <a href="/signup" class="moveTo signUp">회원가입 하러가기</a>
+  </div>
+</main>
+
+<%- include("includes/footer"); %>

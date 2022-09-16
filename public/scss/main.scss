@@ -1,0 +1,158 @@
+$point-color: #ffdc2c;
+$gray-color: #e7ebef;
+$link-blue: #2baaff;
+
+#main {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  margin: 80px 0;
+  .wrap {
+    display: flex;
+    align-items: flex-end;
+    .secTitle {
+      margin-right: 20px;
+      padding: 20px 20px 5px 20px;
+      font-size: 24px;
+      background-color: $point-color;
+      border-radius: 10px 10px 0 0;
+    }
+    .sub {
+      color: #999;
+      transform: translateY(-2px);
+    }
+  }
+  .contents {
+    margin-top: 30px;
+    .more {
+      text-align: right;
+      transition: color 0.2s ease;
+      &:hover {
+        color: $link-blue;
+      }
+    }
+  }
+}
+
+#signform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 230px);
+  .contents {
+    .title {
+      font-size: 24px;
+    }
+    form {
+      &.signUpForm {
+        .inputBox {
+          padding: 20px 10px;
+          background: none;
+          border-radius: 0;
+          label {
+            display: flex;
+            align-items: center;
+            position: relative;
+            .label {
+              display: flex;
+              width: 110px;
+              margin-bottom: 0 !important;
+              &.must {
+                &:before {
+                  position: absolute;
+                  display: inline-block;
+                  content: "*";
+                  color: #ff6200;
+                  left: -10px;
+                }
+              }
+            }
+            input {
+              padding: 8px 70px 8px 10px;
+              border-bottom: 1px solid #111;
+              border-radius: 0;
+            }
+            .btnDupCheck {
+              position: absolute;
+              right: -100px;
+              color: #ff6200;
+              background: none;
+            }
+            .btnVisibility {
+              position: absolute;
+              right: 0;
+              font-family: "Material Icons";
+              color: #999;
+              background: none;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      .inputBox {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        padding: 20px 80px;
+        background-color: $gray-color;
+        border-radius: 10px;
+        label {
+          margin: 8px 0;
+          .label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+          }
+          input {
+            padding: 8px 20px;
+            font-family: "IBMPlexSansKR-Regular";
+            border: none;
+            outline: none;
+            border-radius: 5px;
+          }
+        }
+        .btns {
+          margin-top: 30px;
+          text-align: center;
+          .btn {
+            padding: 8px 20px;
+            font-weight: 700;
+            border-radius: 5px;
+            &.btnLogin {
+              transition: background-color 0.2s ease;
+              background-color: $point-color;
+              &:hover {
+                background-color: darken($point-color, 10);
+              }
+            }
+            &.btnSignUp {
+              transition: background-color 0.2s ease;
+              background-color: $point-color;
+              &:hover {
+                background-color: darken($point-color, 10);
+              }
+            }
+            &.btnCancel {
+              margin-left: 8px;
+              color: #fff;
+              background-color: #111;
+            }
+          }
+        }
+      }
+    }
+    .moveTo {
+      display: block;
+      margin-top: 30px;
+      font-size: 14px;
+      text-align: center;
+      transition: color 0.2s ease;
+      &:hover {
+        color: $link-blue;
+      }
+    }
+  }
+}
